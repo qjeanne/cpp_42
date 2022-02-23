@@ -1,0 +1,20 @@
+#ifndef EX03_CURE_HPP
+#define EX03_CURE_HPP
+
+#include "AMateria.hpp"
+
+class Cure : public AMateria
+{
+	public:
+		Cure();
+		~Cure();
+		Cure(const Cure &other);
+
+		Cure &operator =(const Cure &other);
+
+		AMateria* clone() const;
+		void use(ICharacter& target);
+};
+
+
+#endif
